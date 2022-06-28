@@ -48,6 +48,12 @@ module.exports = [{
   resolve: {
     extensions: ['.ts', '.js', '.jsx', '.tsx']
   },
+  devServer: {
+    static: {
+      directory: `${__dirname}/static`,
+    },
+    port: 8080
+  },
   module: {
     rules: [{
       test: /\.(js|jsx)$/,

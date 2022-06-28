@@ -9,7 +9,9 @@
     "build": "webpack",
     "start": "npm run build && node ./build/server.js",
     "start:ts": "npm run build:ts && node ./build/server.js",
-    "dev:ts": "nodemon --watch src -e ts,tsx --exec ts-node --files src/server.ts"
+
+    "dev:node": "nodemon --watch src -e ts,tsx --exec ts-node --files src/server.ts",
+    "dev:serve": "webpack-dev-server --hot"
   },
   "keywords": [],
   "author": "",
