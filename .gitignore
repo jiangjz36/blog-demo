@@ -1,0 +1,12 @@
+build/
+build/server.js
+
+node_modules/
+
+.vscode/
+
+static/upload/
+static/client.js
+static/client.js.map
+
+src/config.js
