@@ -37,47 +37,4 @@ module.exports = [{
       ]
     }]
   }
-}, {
-  mode: 'development',
-  entry: './src/client.tsx',
-  output: {
-    path: `${__dirname}/static`,
-    filename: 'client.js'
-  },
-  devtool: 'source-map',
-  resolve: {
-    extensions: ['.ts', '.js', '.jsx', '.tsx']
-  },
-  devServer: {
-    static: {
-      directory: `${__dirname}/static`,
-    },
-    port: 8080
-  },
-  module: {
-    rules: [{
-      test: /\.(js|jsx)$/,
-      exclude: /node_modules/,
-      loader: 'babel-loader',
-      options: {
-        presets: ['@babel/preset-env', '@babel/preset-react'],
-        plugins: ['@babel/plugin-transform-runtime']
-      }
-    }, {
-      test: /\.(ts|tsx)$/,
-      exclude: /node_modules/,
-      use: [
-        {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-            plugins: ['@babel/plugin-transform-runtime']
-          }
-        }, 
-        {
-          loader: 'ts-loader'
-        }
-      ]
-    }]
-  }
 }];

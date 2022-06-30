@@ -1,6 +1,5 @@
-// const mongoose = require('mongoose')
-// const express = require('express')
-// const bodyParser = require('body-parser')
+import serverRender from './jsx/layout/ServerTemplate'
+
 import express from 'express'
 import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
@@ -22,7 +21,7 @@ mongoose.connect(
 
     app.use('/api/users', userRouter)
 
-    // app.use(serverRender);
+    app.use(serverRender);
 
     app.listen(PORT, () => [
       console.log(`App listening on ${HOST}:${PORT}`)
